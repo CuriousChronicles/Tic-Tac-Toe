@@ -110,8 +110,8 @@ class TicTacToe:
         else:
             print(F"{winner} wins the game")                
 
-if __name__ == '__main__':
-    x_player = ComputerPlayer('X')
-    o_player = ComputerPlayer('O')
-    t = TicTacToe()
-    t.play(x_player, o_player, print_game = True)
+# if __name__ == '__main__':
+#     x_player = HumanPlayer('X')
+#     o_player = ComputerPlayer('O')
+#     t = TicTacToe()
+#     t.play(x_player, o_player, print_game = True)
