@@ -12,6 +12,7 @@ class Application(tk.Tk):
         self.container = tk.Frame(self)
         self.container.grid(sticky="nsew")
 
+        # I've made some kind of change here
         self.frames = {}
 
         for F in (StartPage, HumanVHuman, HumanVComputer, ComputerVComputer):
