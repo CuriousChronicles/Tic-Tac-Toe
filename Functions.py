@@ -7,6 +7,7 @@ class TicTacToe:
         self.boardList = ['.', '.', '.', '.', '.', '.', '.', '.', '.']
         self.currentWinner = None
 
+    # This function was used to print the game in text-based
     def printBoard(self):
         for row in range(3):
             for col in range(3):
@@ -108,10 +109,8 @@ class TicTacToe:
         if winner == None:
             print('Draw')
         else:
-            print(F"{winner} wins the game")                
+            print(F"{winner} wins the game")    
 
-# if __name__ == '__main__':
-#     x_player = HumanPlayer('X')
-#     o_player = ComputerPlayer('O')
-#     t = TicTacToe()
-#     t.play(x_player, o_player, print_game = True)
+    def resetBoard(self):
+        self.boardList = ['.', '.', '.', '.', '.', '.', '.', '.', '.']
+        self.currentWinner = None
