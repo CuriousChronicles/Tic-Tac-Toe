@@ -1,4 +1,5 @@
 import tkinter as tk
+import time
 from tkinter import messagebox
 from Functions import TicTacToe
 from Player import HumanPlayer, RandomComputerPlayer, ComputerPlayer
@@ -159,13 +160,15 @@ class HumanVComputer(tk.Frame):
             self.current_player = self.player1 if self.current_player == self.player2 else self.player2
 
             # Computer's turn
+            # Add a delay when computer makes a move
             if isinstance(self.current_player, ComputerPlayer):
-                self.make_computer_move()
+                self.after(100, self.make_computer_move)
 
     def make_computer_move(self):
         index = self.current_player.getMove(self.game)
         self.game.makeTurn(index, self.current_player.letter)
         self.board_buttons[index // 3][index % 3].config(text=self.current_player.letter)
+        time.sleep(1.0)
 
         if self.game.checkWin(self.current_player.letter):
             tk.messagebox.showinfo("Game Over", f"{self.current_player.letter} wins!")
