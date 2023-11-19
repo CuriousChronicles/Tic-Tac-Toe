@@ -2,7 +2,7 @@
 2023 Personal Project to learn to practice python.
 GUI Tic-Tac-Toe Game, you can play with friends, with AI, or watch a game.
 
-###### Features
+##### Features
 - GUI
 - Mode Selection
 
