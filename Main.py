@@ -102,7 +102,7 @@ class HumanVHuman(tk.Frame):
         for i in range(3):
             for j in range(3):
                 self.board_buttons[i][j].config(text=" ")
-                
+
         self.current_player = self.player1
 
 class HumanVComputer(tk.Frame):
@@ -180,7 +180,13 @@ class HumanVComputer(tk.Frame):
         self.current_player = self.player1 if self.current_player == self.player2 else self.player2
 
     def reset(self):
-        self.game.boardList = ['.', '.', '.', '.', '.', '.', '.', '.', '.']
+        self.game.resetBoard()
+
+        for i in range(3):
+            for j in range(3):
+                self.board_buttons[i][j].config(text=" ")
+
+        self.current_player = self.player1
 
 class ComputerVComputer(tk.Frame):
     def __init__(self, parent, controller):
